@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta content="laser Inc. - Download codeEditor" property="og:title" />
     <meta content="Download the new codeEditor desktop app" property="og:description" />
@@ -16,15 +17,55 @@
 <style>
     body {
         background-color: lightgray;
+        zoom: 1.2;
+    }
+
+    .center-screen {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 70vh;
+    }
+
+    .table {
+        border-color: gray;
+    }
+
+    .download {
+        text-decoration: none;
+        color: blue;
+        opacity: 0.7;
+    }
+
+    .download:hover {
+        opacity: 1;
     }
 </style>
+
 <body>
-    <table border="2" cellpadding="2">
-        <th>Download link</th><th>Description</th>
-        <tr><td><a href="https://www.dropbox.com/sh/9hi086pk2y3977y/AABeRIf9sQ9iSNdwexSJ_1KKa?dl=1">codeEditor_setup.zip</a></td><td>{ALPHA} | codeEditor setup [v.4] / PASSWORD REQUIRED</td></tr>
-        <tr><td><a href="https://www.dropbox.com/sh/hsm3tsez5dwrvvc/AAADkUQ2MtWskPPkN-CfYluRa?dl=1">codeEditorV4.2_setup.zip</a></td><td>{BETA} | codeEditor setup [v.4.2] / PASSWORD REQUIRED</td></tr>
-        <tr><td><a href="#soon_there">zxpb1vG.zip</a></td><td>Invalid</td></tr>
-        </table>
-        </p>
+    <div class="center-screen">
+    <table class="table" border="2" cellpadding="2">
+        <th>Download link</th>
+        <th>Description</th>
+        <tr>
+            <td><a class="download"
+                    href="https://www.dropbox.com/sh/9hi086pk2y3977y/AABeRIf9sQ9iSNdwexSJ_1KKa?dl=1">codeEditor_setup.zip</a>
+            </td>
+            <td>{ALPHA} | codeEditor setup [v.4] / PASSWORD REQUIRED</td>
+        </tr>
+        <tr>
+            <td><a class="download"
+                    href="https://www.dropbox.com/sh/hsm3tsez5dwrvvc/AAADkUQ2MtWskPPkN-CfYluRa?dl=1">codeEditorV4.2_setup.zip</a>
+            </td>
+            <td>{BETA} | codeEditor setup [v.4.2] / PASSWORD REQUIRED</td>
+        </tr>
+        <tr>
+            <td><a class="download" href="#soon_there">.zip</a></td>
+            <td>Invalid</td>
+        </tr>
+    </table>
+</div>
 </body>
+
 </html>
