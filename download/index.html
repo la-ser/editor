@@ -15,6 +15,84 @@
     <title>codeEditor - Download</title>
 </head>
 <style>
+
+table { 
+  width: 50%; 
+  border-collapse: collapse; 
+}
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #eee; 
+}
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block;
+        background-color: darkgray;
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Filename"; }
+	td:nth-of-type(2):before { content: "Description"; }
+	td:nth-of-type(3):before { content: "Version"; }
+	td:nth-of-type(4):before { content: "Public"; }
+	td:nth-of-type(5):before { content: "Password"; }
+
+    .download {
+        color: blue;
+        font-size: 80%;
+    }
+
+    .desktop {
+        display: none;
+    }
+}
+
+/*                                        */
     body {
         background-color: lightgray;
         zoom: 1.2;
@@ -28,41 +106,41 @@
         min-height: 70vh;
     }
 
-    .table {
-        border-color: gray;
-    }
-
     .download {
-        text-decoration: none;
         color: blue;
-        opacity: 0.7;
     }
-
-    .download:hover {
-        opacity: 1;
-    }
+    
 </style>
 
 <body>
     <div class="center-screen">
     <table class="table" border="2" cellpadding="2">
-        <th>Download link</th>
-        <th>Description</th>
+        <!-- EMOJIS: ❌ / ✔️ / 🕒 -->
+        <th class="desktop">Download link</th>
+        <th class="desktop">Description</th>
+        <th class="desktop">Version</th>
+        <th class="desktop">Public</th>
+        <th class="desktop">Password</th>
         <tr>
-            <td><a class="download"
-                    href="https://www.dropbox.com/sh/9hi086pk2y3977y/AABeRIf9sQ9iSNdwexSJ_1KKa?dl=1">codeEditor_setup.zip</a>
-            </td>
-            <td>{ALPHA} | codeEditor setup [v.4] / PASSWORD REQUIRED</td>
+            <td><a class="download" href="https://www.dropbox.com/s/liv52okrm9mx3la/codeEditorV4.2_setup.exe?dl=1">codeEditorV4.2_setup.exe</a></td>
+            <td class="disc">{BETA} codeEditor setup [v.4.2]</td>
+            <td class="version">[4.2]</td>
+            <td>❌</td>
+            <td>❌</td>
         </tr>
         <tr>
-            <td><a class="download"
-                    href="https://www.dropbox.com/sh/hsm3tsez5dwrvvc/AAADkUQ2MtWskPPkN-CfYluRa?dl=1">codeEditorV4.2_setup.zip</a>
-            </td>
-            <td>{BETA} | codeEditor setup [v.4.2] / PASSWORD REQUIRED</td>
+            <td><a class="download" href="#soon_there">codeEditorV4.2_setup.exe</a></td>
+            <td class="disc">Invalid</td>
+            <td class="version">[5]</td>
+            <td>✔️</td>
+            <td>codeEditor5</td>
         </tr>
         <tr>
-            <td><a class="download" href="#soon_there">.zip</a></td>
-            <td>Invalid</td>
+            <td><a class="download" href="#soon_there">.unknown</a></td>
+            <td class="disc">Invalid</td>
+            <td class="version">[X]</td>
+            <td>🕒</td>
+            <td>🕒</td>
         </tr>
     </table>
 </div>
